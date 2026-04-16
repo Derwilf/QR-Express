@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Code - VHM Ingeniería S.A.S.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <style>
+    :root {
+      --primary: #0F4C81;
+      --primary-dark: #0A3A66;
+      --bg: #FAFBFC;
+      --text: #1A2332;
+      --text-secondary: #5A6B7D;
+      --border: #E2E8F0;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .qr-container {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+      padding: 48px 40px;
+      text-align: center;
+      max-width: 440px;
+      width: 100%;
+    }
+
+    .qr-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+
+    .qr-logo h1 {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .qr-logo span {
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: #8A97A8;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .qr-subtitle {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      margin-bottom: 32px;
+    }
+
+    #qrcode {
+      display: inline-block;
+      padding: 16px;
+      background: white;
+      border: 2px solid var(--border);
+      border-radius: 16px;
+      margin-bottom: 24px;
+    }
+
+    #qrcode img,
+    #qrcode canvas {
+      display: block;
+    }
+
+    .qr-info {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+
+    .qr-info strong {
+      color: var(--text);
+    }
+
+    .qr-url {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #F0F7FF;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      color: var(--primary);
+      font-weight: 600;
+      word-break: break-all;
+      margin-bottom: 24px;
+    }
+
+    .btn-download {
+      display: inline-block;
+      padding: 14px 32px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-family: inherit;
+    }
+
+    .btn-download:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(15,76,129,0.3);
+    }
+
+    .footer-text {
+      margin-top: 24px;
+      font-size: 0.75rem;
+      color: #B0BCC8;
+    }
+
+    @media (max-width: 480px) {
+      .qr-container {
+        padding: 32px 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="qr-container">
+    <div class="qr-logo">
+      <svg width="40" height="40" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="48" height="48" rx="10" fill="#0F4C81"/>
+        <path d="M10 14L16 34H18L24 20L30 34H32L38 14H35L30.5 28L24.5 14H23.5L17.5 28L13 14H10Z" fill="white"/>
+      </svg>
+      <div>
+        <h1>VHM Ingeniería</h1>
+        <span>S.A.S.</span>
+      </div>
+    </div>
+    <p class="qr-subtitle">Escanea el código QR para más información</p>
+
+    <div id="qrcode"></div>
+
+    <p class="qr-info">
+      <strong>VHM Ingeniería S.A.S.</strong><br>
+      Ingeniería Industrial, Biomédica, Informática<br>
+      y Tecnologías de Innovación
+    </p>
+
+    <div class="qr-url">www.vhmingenieria.com</div>
+
+    <br>
+
+    <button class="btn-download" onclick="downloadQR()">Descargar QR</button>
+
+    <p class="footer-text">Cúcuta, Norte de Santander, Colombia</p>
+  </div>
+
+  <script>
+    // Generate QR Code pointing to VHM Ingeniería website
+    var qrcode = new QRCode(document.getElementById("qrcode"), {
+      text: "https://www.vhmingenieria.com",
+      width: 220,
+      height: 220,
+      colorDark: "#0F4C81",
+      colorLight: "#ffffff",
+      correctLevel: QRCode.CorrectLevel.H
+    });
+
+    function downloadQR() {
+      var canvas = document.querySelector('#qrcode canvas');
+      if (!canvas) {
+        // If QRCode rendered as image (table mode), get img instead
+        var img = document.querySelector('#qrcode img');
+        if (img) {
+          var link = document.createElement('a');
+          link.download = 'VHM-Ingenieria-QR.png';
+          link.href = img.src;
+          link.click();
+          return;
+        }
+        return;
+      }
+
+      var link = document.createElement('a');
+      link.download = 'VHM-Ingenieria-QR.png';
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+    }
+  </script>
+
+</body>
+</html>
