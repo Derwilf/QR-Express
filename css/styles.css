@@ -57,75 +57,69 @@ a:hover {
   color: var(--primary-light);
 }
 
-/* ---- Header ---- */
-.header {
-  background: var(--bg-white);
-  border-bottom: 1px solid var(--border);
-  padding: 16px 0;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+/* ---- Hero with QR ---- */
+.hero {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: white;
+  padding: 48px 0 56px;
+  text-align: center;
 }
 
-.header-brand {
-  display: flex;
+.hero-brand {
+  display: inline-flex;
   align-items: center;
   gap: 14px;
+  margin-bottom: 12px;
 }
 
-.brand-name {
-  font-size: 1.3rem;
+.hero-brand .brand-name {
+  font-size: 1.5rem;
   font-weight: 800;
-  color: var(--primary);
+  color: white;
   line-height: 1.2;
 }
 
-.brand-type {
+.hero-brand .brand-type {
   font-size: 0.75rem;
   font-weight: 600;
-  color: var(--text-light);
+  color: rgba(255,255,255,0.6);
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
-/* ---- Hero ---- */
-.hero {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-  color: white;
-  padding: 60px 0 70px;
-  text-align: center;
-}
-
 .hero-tag {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 600;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  opacity: 0.8;
+  opacity: 0.7;
+  margin-bottom: 32px;
+}
+
+.qr-wrapper {
+  display: inline-block;
+  background: white;
+  padding: 18px;
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.2);
   margin-bottom: 16px;
 }
 
-.hero-title {
-  font-size: 2rem;
-  font-weight: 800;
-  line-height: 1.2;
-  margin-bottom: 16px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+#qrcode img,
+#qrcode canvas {
+  display: block;
+  border-radius: 8px;
 }
 
-.hero-description {
-  font-size: 1.05rem;
-  opacity: 0.9;
-  max-width: 520px;
-  margin: 0 auto 30px;
-  line-height: 1.7;
+.qr-hint {
+  font-size: 0.85rem;
+  opacity: 0.75;
+  margin-bottom: 28px;
 }
 
 .btn {
   display: inline-block;
-  padding: 14px 32px;
+  padding: 14px 36px;
   border-radius: 50px;
   font-weight: 600;
   font-size: 0.95rem;
@@ -149,10 +143,10 @@ a:hover {
 /* ---- Section Titles ---- */
 .section-title {
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 800;
   color: var(--primary);
-  margin-bottom: 36px;
+  margin-bottom: 32px;
   position: relative;
 }
 
@@ -168,15 +162,15 @@ a:hover {
 
 /* ---- About ---- */
 .about {
-  padding: 60px 0;
+  padding: 56px 0;
   background: var(--bg-white);
 }
 
 .about-text {
-  font-size: 1.02rem;
+  font-size: 1rem;
   color: var(--text-secondary);
-  max-width: 720px;
-  margin: 0 auto 16px;
+  max-width: 700px;
+  margin: 0 auto 14px;
   text-align: center;
   line-height: 1.8;
 }
@@ -191,21 +185,21 @@ a:hover {
 
 /* ---- Services ---- */
 .services {
-  padding: 60px 0;
+  padding: 56px 0;
   background: var(--bg);
 }
 
 .services-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 18px;
 }
 
 .service-card {
   background: var(--bg-white);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 28px 24px;
+  padding: 26px 22px;
   transition: all 0.3s;
 }
 
@@ -216,47 +210,47 @@ a:hover {
 }
 
 .service-icon {
-  width: 52px;
-  height: 52px;
+  width: 50px;
+  height: 50px;
   border-radius: var(--radius-sm);
   background: linear-gradient(135deg, #EBF5FF 0%, #DBEAFE 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   color: var(--primary);
 }
 
 .service-card h3 {
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 700;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   color: var(--text);
 }
 
 .service-card p {
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   color: var(--text-secondary);
   line-height: 1.6;
 }
 
 /* ---- Contact ---- */
 .contact {
-  padding: 60px 0;
+  padding: 56px 0;
   background: var(--bg-white);
 }
 
 .contact-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 18px;
 }
 
 .contact-card {
   display: flex;
   align-items: flex-start;
-  gap: 16px;
-  padding: 24px;
+  gap: 14px;
+  padding: 22px;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   transition: box-shadow 0.3s;
@@ -268,8 +262,8 @@ a:hover {
 
 .contact-icon {
   flex-shrink: 0;
-  width: 44px;
-  height: 44px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   background: linear-gradient(135deg, #EBF5FF 0%, #DBEAFE 100%);
   display: flex;
@@ -279,16 +273,16 @@ a:hover {
 }
 
 .contact-card h3 {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: var(--text-light);
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 .contact-card p {
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   color: var(--text-secondary);
   line-height: 1.6;
 }
@@ -304,27 +298,27 @@ a:hover {
 
 /* ---- Social ---- */
 .social {
-  padding: 50px 0;
+  padding: 36px 0;
   background: var(--bg);
 }
 
 .social-links {
   display: flex;
   justify-content: center;
-  gap: 16px;
+  gap: 14px;
   flex-wrap: wrap;
 }
 
 .social-btn {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  padding: 14px 24px;
+  gap: 8px;
+  padding: 12px 22px;
   background: var(--bg-white);
   border: 1px solid var(--border);
   border-radius: 50px;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: var(--text);
   transition: all 0.3s;
 }
@@ -345,24 +339,34 @@ a:hover {
   background: var(--bg-dark);
   color: rgba(255,255,255,0.7);
   text-align: center;
-  padding: 30px 0;
-  font-size: 0.85rem;
+  padding: 28px 0;
+  font-size: 0.82rem;
 }
 
 .footer-location {
   margin-top: 4px;
   opacity: 0.5;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
 }
 
 /* ---- Responsive ---- */
 @media (max-width: 640px) {
-  .hero-title {
-    font-size: 1.5rem;
+  .hero {
+    padding: 36px 0 44px;
   }
 
-  .hero {
-    padding: 40px 0 50px;
+  .hero-brand .brand-name {
+    font-size: 1.25rem;
+  }
+
+  .qr-wrapper {
+    padding: 14px;
+  }
+
+  #qrcode img,
+  #qrcode canvas {
+    width: 180px !important;
+    height: 180px !important;
   }
 
   .services-grid,
@@ -371,14 +375,17 @@ a:hover {
   }
 
   .section-title {
-    font-size: 1.35rem;
+    font-size: 1.3rem;
   }
 
   .about,
   .services,
-  .contact,
+  .contact {
+    padding: 40px 0;
+  }
+
   .social {
-    padding: 44px 0;
+    padding: 28px 0;
   }
 
   .social-links {
