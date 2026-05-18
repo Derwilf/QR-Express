@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Domination Warmonger",
+    "production": 8,
+    "food": 5,
+    "gold": 6,
+    "science": 7,
+    "culture": 3,
+    "happiness": 6,
+    "faith": 2,
+    "military": 10,
+    "aggressive": 9,
+    "declareWar": 9,
+    "commerce": 4,
+    "diplomacy": 3,
+    "loyal": 4,
+    "expansion": 8,
+    "denounceWillingness": 8,
+    "preferredVictoryType": "Domination",
+    "priorities": {
+      "Honor": 10,
+      "Liberty": 8,
+      "Autocracy": 10,
+      "Commerce": 5,
+      "Tradition": 5,
+      "Rationalism": 7,
+      "Piety": 1,
+      "Patronage": 3,
+      "Aesthetics": 1,
+      "Freedom": 2,
+      "Order": 7
+    },
+    "uniques": [
+      "Will not build [religious units]"
+    ]
+  }
+]
