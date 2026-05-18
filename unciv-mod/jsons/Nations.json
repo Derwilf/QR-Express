@@ -1,0 +1,130 @@
+[
+  {
+    "name": "Rome",
+    "personality": "Domination Warmonger"
+  },
+  {
+    "name": "The Huns",
+    "personality": "Domination Warmonger"
+  },
+  {
+    "name": "The Mongols",
+    "personality": "Domination Warmonger"
+  },
+  {
+    "name": "Germany",
+    "personality": "Aggressive Expansionist"
+  },
+  {
+    "name": "The Aztecs",
+    "personality": "Domination Warmonger"
+  },
+  {
+    "name": "Songhai",
+    "personality": "Domination Warmonger"
+  },
+  {
+    "name": "The Ottomans",
+    "personality": "Aggressive Expansionist"
+  },
+  {
+    "name": "Japan",
+    "personality": "Domination Warmonger"
+  },
+  {
+    "name": "Persia",
+    "personality": "Aggressive Expansionist"
+  },
+  {
+    "name": "Greece",
+    "personality": "Aggressive Expansionist"
+  },
+  {
+    "name": "Russia",
+    "personality": "Aggressive Expansionist"
+  },
+  {
+    "name": "China",
+    "personality": "Tactical Defender"
+  },
+  {
+    "name": "France",
+    "personality": "Tactical Defender"
+  },
+  {
+    "name": "England",
+    "personality": "Aggressive Expansionist"
+  },
+  {
+    "name": "Arabia",
+    "personality": "Aggressive Expansionist"
+  },
+  {
+    "name": "Siam",
+    "personality": "Tactical Defender"
+  },
+  {
+    "name": "India",
+    "personality": "Tactical Defender"
+  },
+  {
+    "name": "Egypt",
+    "personality": "Tactical Defender"
+  },
+  {
+    "name": "Babylon",
+    "personality": "Tactical Defender"
+  },
+  {
+    "name": "America",
+    "personality": "Aggressive Expansionist"
+  },
+  {
+    "name": "Denmark",
+    "personality": "Domination Warmonger"
+  },
+  {
+    "name": "Korea",
+    "personality": "Tactical Defender"
+  },
+  {
+    "name": "Carthage",
+    "personality": "Aggressive Expansionist"
+  },
+  {
+    "name": "Byzantium",
+    "personality": "Tactical Defender"
+  },
+  {
+    "name": "Austria",
+    "personality": "Aggressive Expansionist"
+  },
+  {
+    "name": "Sweden",
+    "personality": "Tactical Defender"
+  },
+  {
+    "name": "The Celts",
+    "personality": "Aggressive Expansionist"
+  },
+  {
+    "name": "The Maya",
+    "personality": "Tactical Defender"
+  },
+  {
+    "name": "Ethiopia",
+    "personality": "Tactical Defender"
+  },
+  {
+    "name": "Spain",
+    "personality": "Domination Warmonger"
+  },
+  {
+    "name": "Polynesia",
+    "personality": "Aggressive Expansionist"
+  },
+  {
+    "name": "Iroquois",
+    "personality": "Aggressive Expansionist"
+  }
+]
