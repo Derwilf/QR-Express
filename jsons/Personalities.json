@@ -16,18 +16,16 @@
     "loyal": 4,
     "expansion": 8,
     "denounceWillingness": 8,
-    "preferredVictoryType": "Domination",
     "priorities": {
-      "Honor": 10,
-      "Liberty": 8,
-      "Autocracy": 10,
-      "Commerce": 5,
       "Tradition": 5,
-      "Rationalism": 7,
-      "Piety": 1,
+      "Liberty": 8,
+      "Honor": 10,
+      "Commerce": 5,
       "Patronage": 3,
-      "Aesthetics": 1,
+      "Piety": 1,
+      "Rationalism": 7,
       "Freedom": 2,
+      "Autocracy": 10,
       "Order": 7
     }
   }
